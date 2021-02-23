@@ -7,10 +7,7 @@ This is a temporary script file.
 
 import re 
 
-'''
-Se trata de un patrón que nos permite reconocer dichos caracteres 
-en la secuencia y agruparlos en grupos de 3.
-'''
+
 
 def leer_secuencia(inputfile):
     '''Función que nos permite leer y cargar la secuencia desde el txt.
@@ -46,7 +43,9 @@ def traduccion(secuencia):
     proteina = " "  #Inicializamos la variable proteina como una cadena vacía.
 
     pattern = re.compile('((?:A|C|T|G){3})', re.IGNORECASE ) 
-    
+    '''Se trata de un patrón que nos permite reconocer dichos caracteres 
+en la secuencia y agruparlos en grupos de 3.
+'''
     for codon in pattern.findall(secuencia):
         print(codon.upper())
         
